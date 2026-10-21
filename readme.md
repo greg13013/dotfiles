@@ -14,18 +14,18 @@ sudo apt update && sudo apt install git curl zsh fzf zoxide -y
 ```
 
 ### 2. Récupérer les fichiers
-Clone ce dépôt dans ton dossier personnel :
+Clone ce dépôt côté Windows dans `C:\Git\dotfiles` (vu depuis WSL : `/mnt/c/Git/dotfiles`) :
 
 ```bash
-git clone https://github.com/greg13013/dotfiles.git ~/dotfiles
+git clone https://github.com/greg13013/dotfiles.git /mnt/c/Git/dotfiles
 ```
 
 ### 3. Créer les liens symboliques
 Ces commandes connectent ton système aux fichiers du dépôt (écrase les fichiers par défaut) :
 
 ```bash
-ln -sf ~/dotfiles/zshrc ~/.zshrc
-ln -sf ~/dotfiles/p10k.zsh ~/.p10k.zsh
+ln -sf /mnt/c/Git/dotfiles/zshrc ~/.zshrc
+ln -sf /mnt/c/Git/dotfiles/.p10k.zsh ~/.p10k.zsh
 ```
 
 ### 4. Activer Zsh par défaut
@@ -54,7 +54,7 @@ Pour que le thème s'affiche correctement (icônes, flèches, logos), tu **dois*
 ## 🔄 Synchronisation
 Si tu modifies ta configuration :
 ```bash
-cd ~/dotfiles
+cd /mnt/c/Git/dotfiles
 git add .
 git commit -m "Mise à jour de la config"
 git push
@@ -62,5 +62,5 @@ git push
 
 Pour récupérer les changements sur une autre machine :
 ```bash
-cd ~/dotfiles && git pull
+cd /mnt/c/Git/dotfiles && git pull
 ```
